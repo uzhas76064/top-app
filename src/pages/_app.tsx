@@ -6,8 +6,10 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
       <>
         <Head>
-          <title>My top - наш лучший топ</title>
-          <link rel="icon" href="/favicon.ico"/>
+            <title>My top - наш лучший топ</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link rel="icon" href="/favicon.ico"/>
         </Head>
         <Component {...pageProps} />
       </>
