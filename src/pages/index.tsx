@@ -8,7 +8,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <main >
-          <Headers tag='h2'>Текст</Headers>
+          <Headers tag='h1'>Текст</Headers>
           <Button appearance={'primary'}>Узнать подробнее</Button>
           <Button appearance={'ghost'}>Читать отзывы</Button>
       </main>
