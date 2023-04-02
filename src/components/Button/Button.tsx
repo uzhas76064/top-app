@@ -1,5 +1,6 @@
 import React from "react";
 import {ButtonProps} from "./Button.props";
+import {ReactSVG} from "react-svg";
 import styles from './Button.module.css';
 import cn from 'classnames';
 
@@ -13,7 +14,7 @@ export const Button = ({children, appearance,arrow, className, ...props}: Button
             {children}
             {arrow !== 'none' && <span className={cn(styles.arrow, {
                 [styles.down]: arrow === 'down'})}>
-                <img src="Vector.svg" alt="arrow"/></span>}
+                <ReactSVG src={"icons/Vector.svg"}/></span>}
         </button>
     )
 }

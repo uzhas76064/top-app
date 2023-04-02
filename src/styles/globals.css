@@ -18,7 +18,7 @@
 body {
 	color: var(--black);
 	font-family: var(--font-family);
-	background: #E5E5E5;
+	/*background: #E5E5E5;*/
 }
 
 a {
