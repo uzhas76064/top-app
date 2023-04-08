@@ -3,10 +3,11 @@ import {Headers, Rating, Tag} from "../components";
 import {Button} from "../components";
 import {Paragraph} from "../components";
 import {useState} from "react";
+import {withLayout} from "../components";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home(): JSX.Element {
+export function Home(): JSX.Element {
     const [rating, setRating] = useState<number>(4)
 
   return (
@@ -27,3 +28,5 @@ export default function Home(): JSX.Element {
     </>
   )
 }
+
+export default withLayout(Home)
