@@ -1,0 +1,37 @@
+.footer {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+    grid-template-areas:
+            "copyright agreement confid";;
+    background: var(--primary);
+    line-height: 20px;
+}
+
+.copyright {
+    grid-area: copyright;
+    padding: 25px 30px;
+}
+
+.agreement {
+    grid-area: agreement;
+    padding: 25px 30px;
+
+}
+
+.confidential {
+    grid-area: confid;
+    padding: 25px 30px;
+
+}
+
+@media (max-width: 765px) {
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "copyright"
+                "agreement"
+                "confid";
+    }
+}
