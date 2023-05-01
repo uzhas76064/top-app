@@ -3,8 +3,7 @@
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: 10px;
-    grid-template-areas:
-            "copyright agreement confid";;
+    grid-template-areas: "copyright agreement confid";;
     background: var(--primary);
     line-height: 20px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {HeadersProps} from "@/components/Headers/Headers.props";
+import {HeadersProps} from "./Headers.props";
 import styles from './Headers.module.css';
 
 export const Headers = ({tag, children}: HeadersProps):JSX.Element => {
