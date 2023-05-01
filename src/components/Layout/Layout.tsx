@@ -4,6 +4,7 @@ import {Header} from "../Header/Header";
 import {Footer} from "../Footer/Footer";
 import {Sidebar} from "../Sidebar/Sidebar";
 import {LayoutProps} from "./Layout.props";
+import {AppContextProvider, IAppContext} from "../../context/app.context";
 
 const Layout = ({children}: LayoutProps):JSX.Element => {
     return (
@@ -18,11 +19,13 @@ const Layout = ({children}: LayoutProps):JSX.Element => {
     )
 }
 
-export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent({...props}: T): JSX.Element {
        return (
            <Layout>
-               <Component {...props}/>
+               <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+                   <Component {...props}/>
+               </AppContextProvider>
            </Layout>
        )
     }
