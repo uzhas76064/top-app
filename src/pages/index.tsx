@@ -6,6 +6,7 @@ import {withLayout} from "../components";
 import {GetStaticProps} from "next";
 import axios from "axios";
 import {MenuItem} from "../interfaces/menu.interfaces";
+import {Sidebar} from "../components/Sidebar/Sidebar";
 
 
 export function Home({menu, firstCategory}: HomeProps): JSX.Element {
@@ -25,9 +26,6 @@ export function Home({menu, firstCategory}: HomeProps): JSX.Element {
           <Tag size={'medium'} color={"red"}>Средний красный</Tag>
           <Tag size={'small'} color={"primary"}>Primary small</Tag>
           <Tag size={'medium'} color={"ghost"}>Medium ghost</Tag>
-          <ul>
-              {menu.map(m => <li key={m._id.secondCategory}>{m._id.secondCategory}</li>)}
-          </ul>
       </main>
     </>
   )
